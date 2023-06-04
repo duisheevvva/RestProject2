@@ -1,0 +1,20 @@
+package peaksoft.dto.request;
+import jakarta.validation.constraints.NotEmpty;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class GroupRequest {
+    @NotEmpty(message = "fill in the field")
+    private String groupName;
+    @NotEmpty(message = "fill in the field")
+    private String imageLink;
+    @NotEmpty(message = "fill in the field")
+    private String description;
+    private Long   courseId;
+}
