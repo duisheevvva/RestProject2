@@ -130,9 +130,9 @@ public class StudentServiceImpl implements StudentService {
     public List<StudentResponse> getFilter(String studyFormat) {
         Student student=new Student();
         if(studyFormat.equals("ONLINE")) {
-            return studentRepository.getFiltrOnLine();
+            return studentRepository.getFilterOnLine();
         } else if (studyFormat.equals("OFFLINE")) {
-            return studentRepository.getFiltrOffLine();
+            return studentRepository.getFilterOffLine();
         }
         return Collections.singletonList(StudentResponse.builder().
                 id(student.getId())

@@ -13,8 +13,8 @@ public interface StudentRepository  extends JpaRepository<Student,Long> {
 
 
     @Query("SELECT new peaksoft.dto.response.StudentResponse(s.id, s.firstName, s.lastName, s.email, s.phoneNumber, s.studyFormat, s.isBlocked) FROM Student s WHERE s.studyFormat='ONLINE'")
-    List<StudentResponse> getFiltrOnLine();
+    List<StudentResponse> getFilterOnLine();
 
     @Query("SELECT new peaksoft.dto.response.StudentResponse(s.id, s.firstName, s.lastName, s.email, s.phoneNumber, s.studyFormat, s.isBlocked) FROM Student s WHERE s.studyFormat='OFFLINE'")
-    List<StudentResponse> getFiltrOffLine();
+    List<StudentResponse> getFilterOffLine();
 }
